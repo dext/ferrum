@@ -211,7 +211,7 @@ module Ferrum
 
         unless ws_url
           @logger.puts output if @logger
-          raise "Chrome process did not produce websocket url within #{timeout} seconds"
+          raise ProcessTimeoutError, "Browser did not produce websocket within #{timeout} seconds"
         end
       end
 
